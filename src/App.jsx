@@ -7,8 +7,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<TodoPage />} />
-        <Route path="/dnd" element={<DndPage />} />
+        <Route path="/xdmav.github.io/" element={<TodoPage />} />
+        <Route path="/xdmav.github.io/dnd" element={<DndPage />} />
       </Routes>
     </Router>
   );
