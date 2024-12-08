@@ -1,15 +1,23 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, createHashRouter, RouterProvider } from 'react-router-dom';
 import TodoPage from './pages/TodoPage';
 import DndPage from './pages/DndPage';
+
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <TodoPage />,
+  },
+  {
+    path: "/dnd",
+    element: <DndPage />,
+  },
+]);
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<TodoPage />} />
-        <Route path="/dnd" element={<DndPage />} />
-      </Routes>
+      <RouterProvider router={router} />
     </Router>
   );
 }
